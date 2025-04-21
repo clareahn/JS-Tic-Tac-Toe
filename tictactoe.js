@@ -53,3 +53,33 @@ function handleMove(position) {
     currentPlayer = currentPlayer === '🐐' ? '🍇' : '🐐';
     return true;
 }
+
+/**
+ * Checks if the current player has met any of the 8 win conditions.
+ * Returns true if a win is found, otherwise false.
+ */
+function checkWin() {
+    const conditions = [
+        [0,1,2], [3,4,5], [6,7,8], // Rows
+        [0,3,6], [1,4,7], [2,5,8], // Columns
+        [0,4,8], [2,4,6]           // Diagonals
+        ];
+  
+    return conditions.some(([a, b, c]) => 
+        gameBoard[a] === currentPlayer &&
+        gameBoard[b] === currentPlayer &&
+        gameBoard[c] === currentPlayer
+    );
+}
+// Game loop: keeps running until there is a win or a draw
+while (gameActive) {
+    printBoard();
+    const position = prompt(`Player ${currentPlayer}, enter your move (0-8): `);
+    
+    // Validate the input is between 0 and 8
+    if (position >= 0 && position <= 8) {
+        handleMove(parseInt(position));
+    } else {
+        console.log("Invalid input. Enter a number from 0 to 8.");
+    }
+}
