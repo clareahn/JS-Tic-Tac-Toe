@@ -1,0 +1,23 @@
+{
+  "name": "js-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "A console-based Tic-Tac-Toe game built with native JavaScript using Node.js",
+  "main": "tictactoe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clareahn/JS-Tic-Tac-Toe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clareahn/JS-Tic-Tac-Toe/issues"
+  },
+  "homepage": "https://github.com/clareahn/JS-Tic-Tac-Toe#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
